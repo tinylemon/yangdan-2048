@@ -164,13 +164,13 @@ $(document).keydown( function( event ){  //按键移动函数
 });
 
 document.addEventListener('touchstart',function(event){  //监听滑动事件函数
-    event.preventDefault();
+    //event.preventDefault();
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
 });
 
 document.addEventListener('touchend',function(event){  //监听滑动结束事件函数
-    event.preventDefault();
+    //event.preventDefault();
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
 
@@ -226,7 +226,7 @@ function gameover(){  //游戏结束函数
 }
 
 function moveLeft(){  //左移函数
-
+    event.preventDefault();
     if( !canMoveLeft( board ) )
         return false;
 
@@ -265,6 +265,7 @@ function moveLeft(){  //左移函数
 }
 
 function moveRight(){  //右移函数
+    event.preventDefault();
     if( !canMoveRight( board ) )
         return false;
 
@@ -303,7 +304,7 @@ function moveRight(){  //右移函数
 }
 
 function moveUp(){  //上移函数
-
+    event.preventDefault();
     if( !canMoveUp( board ) )
         return false;
 
@@ -342,6 +343,7 @@ function moveUp(){  //上移函数
 }
 
 function moveDown(){  //下移函数
+    event.preventDefault();
     if( !canMoveDown( board ) )
         return false;
 
