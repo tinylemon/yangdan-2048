@@ -181,7 +181,7 @@ document.addEventListener('touchend',function(event){  //监听滑动结束事�
         return;
 
     if( Math.abs( deltax ) >= Math.abs( deltay ) ){
-
+        event.preventDefault();
         if( deltax > 0 ){
             //move right
             if( moveRight() ){
