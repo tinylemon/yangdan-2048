@@ -164,9 +164,10 @@ $(document).keydown( function( event ){  //按键移动函数
 });
 
 document.addEventListener('touchstart',function(event){  //监听滑动事件函数
-    event.preventDefault();
+   
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
+     event.preventDefault();
 });
 
 document.addEventListener('touchend',function(event){  //监听滑动结束事件函数
