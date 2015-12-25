@@ -164,7 +164,7 @@ $(document).keydown( function( event ){  //按键移动函数
 });
 
 document.addEventListener('touchstart',function(event){  //监听滑动事件函数
-    event.preventDefault();
+
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
 });
@@ -303,7 +303,7 @@ function moveRight(){  //右移函数
     return true;
 }
 
-function moveUp(){  //上移函数
+function moveUp(event){  //上移函数
     event.preventDefault();
     if( !canMoveUp( board ) )
         return false;
@@ -342,7 +342,7 @@ function moveUp(){  //上移函数
     return true;
 }
 
-function moveDown(){  //下移函数
+function moveDown(event){  //下移函数
     event.preventDefault();
     if( !canMoveDown( board ) )
         return false;
