@@ -164,7 +164,7 @@ $(document).keydown( function( event ){  //按键移动函数
 });
 
 document.addEventListener('touchstart',function(event){  //监听滑动事件函数
-
+    event.preventDefault();
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
 });
@@ -199,7 +199,7 @@ document.addEventListener('touchend',function(event){  //监听滑动结束事�
     }
     else{
         if( deltay > 0 ){
-            event.preventDefault();
+            
             //move down
             if( moveDown() ){
                 setTimeout("generateOneNumber()",210);
@@ -208,7 +208,7 @@ document.addEventListener('touchend',function(event){  //监听滑动结束事�
         }
         else{
             //move up
-            event.preventDefault();
+          
             if( moveUp() ){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
