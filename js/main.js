@@ -181,7 +181,7 @@ document.addEventListener('touchend',function(event){  //监听滑动结束事�
         return;
 
     if( Math.abs( deltax ) >= Math.abs( deltay ) ){
-        event.preventDefault();
+
         if( deltax > 0 ){
             //move right
             if( moveRight() ){
@@ -199,6 +199,7 @@ document.addEventListener('touchend',function(event){  //监听滑动结束事�
     }
     else{
         if( deltay > 0 ){
+            event.preventDefault();
             //move down
             if( moveDown() ){
                 setTimeout("generateOneNumber()",210);
@@ -207,6 +208,7 @@ document.addEventListener('touchend',function(event){  //监听滑动结束事�
         }
         else{
             //move up
+            event.preventDefault();
             if( moveUp() ){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
@@ -303,8 +305,8 @@ function moveRight(){  //右移函数
     return true;
 }
 
-function moveUp(event){  //上移函数
-    event.preventDefault();
+function moveUp(){  //上移函数
+
     if( !canMoveUp( board ) )
         return false;
 
@@ -342,8 +344,8 @@ function moveUp(event){  //上移函数
     return true;
 }
 
-function moveDown(event){  //下移函数
-    event.preventDefault();
+function moveDown(){  //下移函数
+
     if( !canMoveDown( board ) )
         return false;
 
