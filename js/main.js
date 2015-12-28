@@ -89,7 +89,7 @@ function updateBoardView(){  //更新前端棋盘函数
         }
 
     $('.number-cell').css('line-height',cellSideLength+'px');
-    $('.number-cell').css('font-size',0.6*cellSideLength+'px');
+    $('.number-cell').css('font-size',0.5*cellSideLength+'px');
 }
 
 function generateOneNumber(){  //在随机位置显示随机数2或4函数
